@@ -1,0 +1,113 @@
+$color: #3378e0;
+@mixin transform($value) {
+  -webkit-transform: translateX($value);
+  -moz-transform: translateX($value);
+  -ms-transform: translateX($value);
+  -o-transform: translateX($value);
+  transform: translateX($value);
+}
+
+@mixin border-radius($value) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value;
+}
+
+.new-game {
+  button {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    @include border-radius(12px);
+    @include transform(-50%);
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    color: #FFF;
+    font-weight: bold;
+  }
+}
+
+.buttons {
+  margin-bottom: 20px;
+
+  button {
+    background-color: $color;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    @include transform(-50%);
+    width: 100px;
+    height: 100px;
+    @include border-radius(12px);
+    color: #FFF;
+    font-weight: bold;
+  }
+}
+
+#output, #result, #number-of-rounds {
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+
+  &.show {
+    display: block;
+  }
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  color: #000;
+  text-decoration: none;
+}
+
+header {
+  font-size: 20px;
+  line-height: 30px;
+  min-height: 30px;
+  font-weight: bold;
+  padding: 0 30px;
+}
+
+.modal {
+  display: none;
+  background: #fff;
+  width: auto;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+
+  &.show {
+    display: block;
+  }
+}
+table {
+  border: 1px solid black;
+  thead{
+    font-weight: bold;
+    background-color: red;
+    color: silver;
+  }
+  tbody{
+    tr{
+      td{
+        border: 1px solid black;
+      }
+    }
+  }
+}
