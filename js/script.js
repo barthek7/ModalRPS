@@ -72,7 +72,7 @@ var playerMove = function (arg) {
                     result("You LOST, you picked " + playerPlay.toUpperCase() + " and computer picked SCISSORS");
                     params.computerScore++;
                     ob.computerMove = 'SCISSORS';
-                    ob.RoundScore = 'PLAYER LOST';
+                    ob.RoundScore = 'COMPUTER WIN';
                     ob.OverallScore = params.playerScore + ' - ' + params.computerScore;
                     params.progress.push(ob);
                     setScores(params.playerScore, params.computerScore);
@@ -89,7 +89,7 @@ var playerMove = function (arg) {
                     result("You LOST, you picked " + playerPlay.toUpperCase() + " and computer picked ROCK");
                     params.computerScore++;
                     ob.computerMove = 'ROCK';
-                    ob.RoundScore = 'PLAYER LOST';
+                    ob.RoundScore = 'COMPUTER WIN';
                     ob.OverallScore = params.playerScore + ' - ' + params.computerScore;
                     params.progress.push(ob);
                     setScores(params.playerScore, params.computerScore);
